@@ -1,6 +1,6 @@
 import React from "react";
 import CourseCard from "./CourseCard";
-import img2 from "../../../../images/course/ielts.jpeg";
+import img2 from "../../../../images/course/ieltss.png";
 import img1 from "../../../../images/course/ptee.jpg";
 // import img3 from "../../../../images/course/sat.jpeg";
 // import bgImg from "../../../../images/course/bg.jpg";

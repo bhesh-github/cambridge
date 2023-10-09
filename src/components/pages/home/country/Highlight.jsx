@@ -23,19 +23,19 @@ const Highlight = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 3.5,
     },
     a: {
       breakpoint: { max: 1065, min: 950 },
-      items: 4,
+      items: 3.5,
     },
     b: {
       breakpoint: { max: 950, min: 820 },
-      items: 4,
+      items: 3.5,
     },
     c: {
       breakpoint: { max: 820, min: 0 },
-      items: 4,
+      items: 3.5,
     },
     d: {
       breakpoint: { max: 690, min: 480 },
