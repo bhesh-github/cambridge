@@ -22,7 +22,7 @@ function App() {
     <>
       <BrowserRouter>
         <Suspense fallback="Loading...">
-          <Popup />
+          {/* <Popup /> */}
 
           <Navbar />
           <ScrollToTop />
