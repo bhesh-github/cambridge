@@ -11,6 +11,26 @@
       font-size: 40px;
       color: $primaryDarkBlue;
       text-align: center;
+      margin-bottom: 45px;
+    }
+    .head-photo {
+      background-color: red;
+      width: 100%;
+    }
+    .box {
+      width: 100%;
+      margin-top: 120px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1em;
+
+      .gallery1 {
+        height: 200px;
+        transition: 0.5s all ease-in-out;
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
     }
   }
 }
