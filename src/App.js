@@ -16,6 +16,12 @@ import ScrollToTopBtn from "./components/forAll/ScrollToTopBtn";
 import ScrollToTop from "./components/forAll/ScrollToTop";
 import Popup from "./components/forAll/Popup";
 import Gallery from "./components/pages/gallery/Gallery";
+// import GalleryImages from "./components/pages/gallery/GalleryImages";
+import GalleryImages from "./components/pages/gallery/galleryImages/GalleryImages";
+import TeamMembers from "./components/pages/teamMembers/TeamMembers";
+import NewsAndBlogsDetail from "./components/pages/newsAndBlogs/newsAndBlogsDetail/NewsAndBlogsDetail";
+import NewsAndBlogs from "./components/pages/newsAndBlogs/NewsAndBlogs";
+import ApplyNow from "./components/pages/applyNow/ApplyNow";
 
 function App() {
   return (
@@ -39,10 +45,20 @@ function App() {
                 element={<Preparation />}
               />
               <Route path="resources/:resourcesSlug" element={<Resources />} />
-
               <Route path="contact-us" element={<Contact />} />
-
+              <Route path="members" element={<TeamMembers />} />
               <Route path="gallery" element={<Gallery />} />
+              <Route
+                path="gallery/:galleryName/images"
+                element={<GalleryImages />}
+              />
+              <Route
+                path="news-blogs-detail/:newsBlogsSlug"
+                element={<NewsAndBlogsDetail />}
+              />
+              <Route path="news-blogs" element={<NewsAndBlogs />} />
+              <Route path="apply-now" element={<ApplyNow />} />
+
               <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>

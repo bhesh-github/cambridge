@@ -1,0 +1,66 @@
+@import "./newsCard";
+
+.news-and-blogs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+  .content {
+    width: 1284.5px;
+    padding: 0 45px;
+
+    .head {
+      font-family: Roboto;
+      text-align: center;
+      color: $primaryDarkerBlue;
+    }
+    .cards-wrapper {
+      margin-top: 60px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2em;
+    }
+    @media screen and (max-width: 1250px) {
+      .cards-wrapper {
+        gap: 1.5em;
+      }
+    }
+    @media screen and (max-width: 950px) {
+      .cards-wrapper {
+        gap: 1em;
+      }
+    }
+    @media screen and (max-width: 900px) {
+      .cards-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .cards-wrapper {
+        margin-top: 30px;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .cards-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+      }
+    }
+  }
+  @media screen and (max-width: 1284.5px) {
+    .content {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .content {
+      padding: 0 15px;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .news-and-blogs {
+    margin-top: 60px;
+  }
+}

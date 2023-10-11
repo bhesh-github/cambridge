@@ -1,7 +1,9 @@
 import React from "react";
 import img from "../../../../images/aboutUs/meeting.png";
+import { useNavigate } from "react-router-dom";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
   return (
     <div className="main">
       <div className="img-desc-wrapper">
@@ -24,7 +26,14 @@ const AboutUs = () => {
             care and make everything clear before students as well their
             parents.
           </p>
-          <button className="abt-btn">See More</button>
+          <button
+            className="abt-btn"
+            onClick={() => {
+              navigate("about-us");
+            }}
+          >
+            See More
+          </button>
         </div>
       </div>
     </div>

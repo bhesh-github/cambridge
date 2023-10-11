@@ -1,0 +1,10 @@
+.other-banner {
+  min-height: 150px;
+  max-height: 325px;
+  width: 100%;
+  .banner-img {
+    height: 100%;
+    width: 100%;
+    filter: blur(0.5px);
+  }
+}

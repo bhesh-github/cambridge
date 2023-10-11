@@ -1,5 +1,14 @@
 .faq-title {
-  font-size: 45px;
-  margin: 120px 0 45px;
+  margin-top: 120px;
   color: $primaryDarkerBlue;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  margin-bottom: 60px;
+}
+@media screen and (max-width: 550px) {
+  .faq-title {
+    margin-bottom: 30px;
+
+    margin-top: 60px;
+  }
 }

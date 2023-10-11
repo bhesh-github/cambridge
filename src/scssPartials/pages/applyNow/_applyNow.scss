@@ -1,0 +1,88 @@
+.apply-now {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+  .content {
+    width: 1284.5px;
+    // margin-top: 3em;
+    padding: 0 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .apply-heading {
+      color: $primaryDarkerBlue;
+      text-align: center;
+    }
+    .input-form {
+      font-family: Roboto;
+      margin-top: 1.5em;
+      width: 700px;
+      .inputs-wrapper {
+        .input-fields {
+          display: flex;
+          flex-direction: column;
+          gap: 1em;
+          .input-and-label {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            .input-field {
+              background-color: #fff;
+              border: 1px solid black;
+              //   border-radius: 5px;
+              padding: 10px;
+              width: 100%;
+            }
+          }
+        }
+      }
+      .book-btn {
+        font-family: "Playfair Display", serif;
+        margin-top: 2em;
+        text-transform: capitalize;
+        background: $primaryOrange;
+        width: max-content;
+        height: 45px;
+        padding: 13px 35px 13px 35px;
+        border-radius: 0;
+        gap: 10px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19px;
+        text-align: left;
+        color: #fff;
+        align-self: center;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      .input-form {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .input-form {
+        width: 100%;
+        margin-top: 0em;
+      }
+    }
+  }
+  @media screen and (max-width: 1284.5px) {
+    .content {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .content {
+      gap: 1em;
+      padding: 0 15px;
+    }
+  }
+}
+@media screen and (max-width: 550px) {
+  .apply-now {
+    margin-top: 60px;
+  }
+}

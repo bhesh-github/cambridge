@@ -1,13 +1,14 @@
 import React from "react";
-import MemberCard from "./MemberCard";
+import MemberCard from "../../../forAll/MemberCard";
 import fotoA from "../../../../images/memberPhoto/foto0.jpg";
 import fotoB from "../../../../images/memberPhoto/foto1.jpg";
 import fotoC from "../../../../images/memberPhoto/foto2.jpg";
 import fotoD from "../../../../images/memberPhoto/foto3.jpg";
-// import fotoE from "../../../../images/memberPhoto/foto4.jpg";
-// import fotoF from "../../../../images/memberPhoto/foto5.jpg";
+import Button from "@mui/material/Button";
+import { useNavigate } from "react-router-dom";
 
 const TeamMembers = ({ teamMembers }) => {
+  const navigate = useNavigate();
   const mCard =
     teamMembers &&
     teamMembers
@@ -27,7 +28,16 @@ const TeamMembers = ({ teamMembers }) => {
           {mCard && mCard}
         </div>
       </div>
-      <button className="seebtn">See More</button>
+      <Button
+        className="seebtn"
+        onClick={() => {
+          setTimeout(() => {
+            navigate("/members");
+          }, 250);
+        }}
+      >
+        See All
+      </Button>
     </div>
   );
 };

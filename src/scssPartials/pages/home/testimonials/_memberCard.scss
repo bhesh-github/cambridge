@@ -1,59 +1,59 @@
-.member-card {
-  //   width: 280px;
-  border: 1px solid grey;
-  border-radius: 0.5em;
-  padding: 25px;
-  height: max-content;
-  // color: blue;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 10px;
-  .member-img {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: grey;
-    border-radius: 0.5em;
-    height: 200px;
-    width: 100%;
-  }
-  .text-wrapper {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    height: 30%;
-    .name {
-      text-align: center;
-    }
-    .position {
-      font-size: 12px;
-      color: grey;
-      text-align: center;
-    }
-    .icons {
-      display: flex;
-      gap: 10px;
-      justify-content: center;
+// .member-card {
+//   //   width: 280px;
+//   border: 1px solid grey;
+//   border-radius: 0.5em;
+//   padding: 25px;
+//   height: max-content;
+//   // color: blue;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   gap: 10px;
+//   .member-img {
+//     background-size: cover;
+//     background-repeat: no-repeat;
+//     background-position: center;
+//     background-color: grey;
+//     border-radius: 0.5em;
+//     height: 200px;
+//     width: 100%;
+//   }
+//   .text-wrapper {
+//     display: flex;
+//     flex-direction: column;
+//     height: 30%;
+//     .name {
+//       text-align: center;
+//       font-size: 20px;
+//     }
+//     .position {
+//       font-size: 14px;
+//       color: grey;
+//       text-align: center;
+//     }
+//     .icons {
+//       display: flex;
+//       gap: 10px;
+//       justify-content: center;
 
-      .icon {
-        color: #7d877e;
-        background-color: #f1f1f1;
-        border-radius: 50%;
-        height: 25px;
-        width: 25px;
-        padding: 5px;
-        cursor: pointer;
-      }
-      .fb:hover {
-        color: #3b5998;
-      }
-      .github:hover {
-        color: #171515;
-      }
-      .linkedin:hover {
-        color: #0072b1;
-      }
-    }
-  }
-}
+//       .icon {
+//         color: #7d877e;
+//         background-color: #f1f1f1;
+//         border-radius: 50%;
+//         height: 25px;
+//         width: 25px;
+//         padding: 5px;
+//         cursor: pointer;
+//       }
+//       .fb:hover {
+//         color: #3b5998;
+//       }
+//       .github:hover {
+//         color: #171515;
+//       }
+//       .linkedin:hover {
+//         color: #0072b1;
+//       }
+//     }
+//   }
+// }

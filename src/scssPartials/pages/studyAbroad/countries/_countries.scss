@@ -1,0 +1,258 @@
+.country {
+  .country-info {
+    margin-top: 120px;
+    .study-heading {
+      color: $primaryDarkerBlue;
+      font-family: playfair;
+      font-size: 40px;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .country-info {
+      margin-top: 60px;
+      .study-heading {
+        font-size: 30px;
+      }
+    }
+  }
+  .why-study {
+    margin-top: 60px;
+    display: block;
+    .country-img {
+      height: 260px;
+      width: 250px;
+      float: left;
+      padding: 0 1em 0em 0;
+      margin-top: 10px;
+    }
+    .why-head {
+      color: $primaryDarkerBlue;
+
+      font-family: "Playfair Display", serif;
+    }
+    .desc {
+      text-align: justify;
+
+      height: 100%;
+    }
+    @media screen and (max-width: 1284.5px) {
+      .country-img {
+        margin: 0;
+        height: 160px;
+        width: 150px;
+        margin-bottom: 0.1em;
+        margin-top: 10px;
+      }
+    }
+    @media screen and (max-width: 650px) {
+      .country-img {
+        float: none;
+      }
+      .why-head {
+        color: $primaryDarkerBlue;
+        font-family: "Playfair Display", serif;
+        margin-top: 0.5em;
+        color: $primaryDarkerBlue;
+        font-family: playfair;
+      }
+    }
+  }
+  .universities-wrapper {
+    margin-top: 60px;
+
+    .universities-head {
+      font-family: "Playfair Display", serif;
+      color: $primaryDarkerBlue;
+    }
+  }
+  .education-cost {
+    margin-top: 60px;
+
+    display: block;
+    .edu-head {
+      font-family: "Playfair Display", serif;
+      color: $primaryDarkerBlue;
+    }
+    .tution-fee-head {
+      margin-top: 0.5em;
+    }
+  }
+  .scholorship {
+    margin-top: 60px;
+
+    .head {
+      font-family: "Playfair Display", serif;
+      color: $primaryDarkerBlue;
+    }
+    .desc {
+      text-align: justify;
+    }
+  }
+  .apply-wrapper {
+    margin-top: 60px;
+
+    .head {
+      font-family: "Playfair Display", serif;
+      color: $primaryDarkerBlue;
+    }
+    .desc {
+      text-align: justify;
+    }
+  }
+  .requirements {
+    margin-top: 60px;
+
+    .requirements-head {
+      font-family: "Playfair Display", serif;
+      color: $primaryDarkerBlue;
+    }
+  }
+}
+// -----------------------------------------------------
+// .can {
+//   .study-can-heading {
+//     color: $primaryDarkerBlue;
+//     font-family: playfair;
+//   }
+//   .can-img {
+//     height: 260px;
+//     width: 250px;
+//     float: left;
+//     padding: 48px 5px 0 0;
+//     margin-right: 10px;
+//   }
+//   .can-why-heading {
+//     color: $primaryDarkerBlue;
+//     font-family: playfair;
+//     padding: 45px 0 10px 0;
+//     // background-color: red;
+//   }
+//   .apply-can-desc {
+//     line-height: 1.5;
+//     color: $primaryGrey;
+//   }
+//   .apply-can-desc-head {
+//     line-height: 2;
+//     color: $primaryDarkerBlack;
+//   }
+//   .apply-desc {
+//     line-height: 2;
+//   }
+//   .apply-desc-note {
+//     line-height: 1.5;
+//     color: $primaryDarkerBlack;
+//     font-weight: 500;
+//     padding-top: 45px;
+//   }
+//   .uni {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     .can-uni-desc {
+//       line-height: 1.5;
+//       // font-size: 16px;
+//       //   text-decoration: double;
+//     }
+//   }
+//   .can-cost-sub-heading {
+//     color: $primaryDarkerBlack;
+//     padding: 20px 0;
+//     font-family: "Playfair Display", serif;
+//     font-size: 18px;
+//   }
+//   .can-cost-desc {
+//     line-height: 2;
+//   }
+//   .can-cost-note {
+//     line-height: 1.5;
+//     color: $primaryDarkerBlack;
+//     font-weight: 500;
+//     padding-top: 30px;
+//   }
+//   .can-scholor-desc {
+//     color: $primaryDarkerBlack;
+//     padding-bottom: 20px;
+//     // font-family: "Playfair Display", serif;
+//   }
+//   .can-scholor-desc {
+//     line-height: 1.5;
+//     padding-bottom: 5px;
+//     .scholor-span {
+//       font-size: 20px;
+//       color: $primaryDarkerBlack;
+//     }
+//   }
+// }
+// // -----------------------------------------------------
+// .usa {
+//   .study-usa-heading {
+//     color: $primaryDarkerBlue;
+//     font-family: playfair;
+//   }
+//   .usa-img {
+//     height: 260px;
+//     width: 250px;
+//     float: left;
+//     padding: 48px 5px 0 0;
+//     margin-right: 10px;
+//   }
+//   .usa-why-heading {
+//     color: $primaryDarkerBlue;
+//     font-family: playfair;
+//     padding: 45px 0 10px 0;
+//     // background-color: red;
+//   }
+//   .apply-usa-desc {
+//     line-height: 1.5;
+//     color: $primaryGrey;
+//   }
+//   .apply-usa-desc-head {
+//     line-height: 2;
+//     color: $primaryDarkerBlack;
+//   }
+//   .apply-desc {
+//     line-height: 2;
+//   }
+//   .apply-desc-note {
+//     line-height: 1.5;
+//     color: $primaryDarkerBlack;
+//     font-weight: 500;
+//     padding-top: 45px;
+//   }
+//   .uni {
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     .usa-uni-desc {
+//       line-height: 1.5;
+//       // font-size: 16px;
+//       //   text-decoration: double;
+//     }
+//   }
+//   .usa-cost-sub-heading {
+//     color: $primaryDarkerBlack;
+//     padding: 20px 0;
+//     font-family: "Playfair Display", serif;
+//     font-size: 18px;
+//   }
+//   .usa-cost-desc {
+//     line-height: 2;
+//   }
+//   .usa-cost-note {
+//     line-height: 1.5;
+//     color: $primaryDarkerBlack;
+//     font-weight: 500;
+//     padding-top: 30px;
+//   }
+//   .usa-scholor-desc {
+//     color: $primaryDarkerBlack;
+//     padding-bottom: 20px;
+//     // font-family: "Playfair Display", serif;
+//   }
+//   .usa-scholor-desc {
+//     line-height: 1.5;
+//     padding-bottom: 5px;
+//     .scholor-span {
+//       font-size: 20px;
+//       color: $primaryDarkerBlack;
+//     }
+//   }
+// }

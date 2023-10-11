@@ -1,11 +1,8 @@
 import React, { useEffect } from "react";
-import logo from "../../../images/logo/logo.png";
-import { IoCallOutline } from "react-icons/io5";
 import { BiLogoFacebookCircle } from "react-icons/bi";
 import { BiLogoTwitter } from "react-icons/bi";
 import { BiLogoInstagram } from "react-icons/bi";
 import { useState } from "react";
-import { IoIosArrowUp } from "react-icons/io";
 import bgImg from "../../../images/footer/bg-img.png";
 import { useNavigate } from "react-router-dom";
 
@@ -72,10 +69,16 @@ const Footer = () => {
                     navigate("/gallery");
                   }}
                 >
-                  Photos
+                  Gallery
                 </div>
-                <div className="links-content-gap">Blogs</div>
-                {/* <div className="links-content-gap">Career</div> */}
+                <div
+                  className="links-content-gap"
+                  onClick={() => {
+                    navigate("/news-blogs");
+                  }}
+                >
+                  News & Blogs
+                </div>
               </div>
             </div>
           </div>

@@ -1,11 +1,119 @@
-import React from "react";
-import Banner from "../../../images/contact/banner.jpg";
+import React, { useState } from "react";
+import Banner from "../../../images/contact/contactBanner.jpeg";
 import { GiEarthAmerica } from "react-icons/gi";
 import { BsTelephoneInbound } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
+import ContactForm from "./ContactForm";
+import ProgressIndicator from "../../forAll/ProgressIndicator";
+import SnackBar from "../../forAll/SnackBar";
 
-const Contact = () => {
-  const locations = [
+const Contact = ({ locations }) => {
+  const [formSubmitting, setFormSubmitting] = useState(false);
+
+  const [snackBarState, setSnackBarState] = useState({
+    open: false,
+    vertical: "bottom",
+    horizontal: "center",
+  });
+  const [alertMessage, setAlertMessage] = useState({
+    successMessage: "",
+    failedMessage: "",
+  });
+  const handleClick = (newState) => () => {
+    setSnackBarState((prev) => ({ ...prev, open: true }));
+  };
+
+  // const Location = ({ location }) => (
+  //   <div className="branch-box">
+  //     <h1 className="title desc">{location.title}</h1>
+  //     <p className="phone desc">{location.phone}</p>
+  //     <p className="email desc">{location.email}</p>
+  //     <p className="address desc">{location.address}</p>
+  //   </div>
+  // );
+
+  const x = locations.map((details) => (
+    <div className="branch-box">
+      <div className="title ">{details.title}</div>
+      <p className="phone desc">{details.phone}</p>
+      <p className="email desc">{details.email}</p>
+      <p className="address desc">{details.address}</p>
+    </div>
+  ));
+
+  return (
+    <>
+      {formSubmitting && (
+        <div className="spinner-wrapper">
+          <ProgressIndicator className="spinner" />
+        </div>
+      )}
+      <div className="contact-us">
+        <img src={Banner} alt="" className="banner" />
+        <div className="content-wrapper">
+          <div className="head-contact">
+            <div className="head-box">
+              <div className="icon">
+                <GiEarthAmerica className="inner-icon" />
+              </div>
+              <div className="address">
+                <div className="title">Address</div>
+                <div>Bagbazar (Opp. Shrestha Tailoring), Kathmandu</div>
+              </div>
+            </div>
+            <div className="head-box">
+              <div className="icon">
+                <BsTelephoneInbound className="inner-icon" />
+              </div>
+              <div className="address">
+                <div className="title">Phone</div>
+                <div>977-1-4223815</div>
+                <div>01-4256776</div>
+              </div>
+            </div>
+            <div className="head-box">
+              <div className="icon">
+                <MdOutlineEmail className="inner-icon" />
+              </div>
+              <div className="address">
+                <div className="title">Email</div>
+                <div>info@cambridgeedu.com.np</div>
+              </div>
+            </div>
+          </div>
+          <ContactForm
+            setFormSubmitting={setFormSubmitting}
+            setAlertMessage={setAlertMessage}
+            setSnackBarState={setSnackBarState}
+            handleClick={handleClick}
+          />
+
+          <div className="our-branches">
+            <h1 className="branches-heading">Our Branches</h1>
+            <div className="boxes">{x && x}</div>
+          </div>
+        </div>
+        <div className="map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3752409713156!2d85.31923917551984!3d27.70569827618346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190786e87ceb%3A0xcd0bb5ab90660324!2sCambridge%20Institute%20of%20Technology!5e0!3m2!1sen!2snp!4v1696399045756!5m2!1sen!2snp"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          ></iframe>
+        </div>
+      </div>
+      <SnackBar
+        alertMessage={alertMessage}
+        snackBarState={snackBarState}
+        setSnackBarState={setSnackBarState}
+      />
+    </>
+  );
+};
+
+export default Contact;
+Contact.defaultProps = {
+  locations: [
     {
       id: 0,
       title: "Sydney Australia Office ",
@@ -93,103 +201,5 @@ const Contact = () => {
       email: " cambridgedharan@gmail.com",
       address: "Chhata Chowk Dharan (Near by Nepal Bank), Sunsari ",
     },
-  ];
-
-  // const Location = ({ location }) => (
-  //   <div className="branch-box">
-  //     <h1 className="title desc">{location.title}</h1>
-  //     <p className="phone desc">{location.phone}</p>
-  //     <p className="email desc">{location.email}</p>
-  //     <p className="address desc">{location.address}</p>
-  //   </div>
-  // );
-
-  const x = locations.map((details) => (
-    <div className="branch-box">
-      <div className="title ">{details.title}</div>
-      <p className="phone desc">{details.phone}</p>
-      <p className="email desc">{details.email}</p>
-      <p className="address desc">{details.address}</p>
-    </div>
-  ));
-
-  return (
-    <div className="contact-us">
-      <img src={Banner} alt="" className="banner" />
-      <div className="content">
-        <p className="p-contact">Contact Us</p>
-        <h1 className="h-contact">Write a message for us !!</h1>
-        <div className="head-contact">
-          <div className="head-box">
-            <div className="icon">
-              <GiEarthAmerica className="inner-icon" />
-            </div>
-            <div className="address">
-              <h2>Address</h2>
-              <p>Bagbazar (Opp. Shrestha Tailoring), Kathmandu</p>
-            </div>
-          </div>
-          <div className="head-box">
-            <div className="icon">
-              <BsTelephoneInbound className="inner-icon" />
-            </div>
-            <div className="address">
-              <h2>Phone</h2>
-              <p>977-1-4223815</p>
-              <p>01-4256776</p>
-            </div>
-          </div>
-          <div className="head-box">
-            <div className="icon">
-              <MdOutlineEmail className="inner-icon" />
-            </div>
-            <div className="address">
-              <h2>Email</h2>
-              <p>info@cambridgeedu.com.np</p>
-            </div>
-          </div>
-        </div>
-        <div className="form">
-          <div className="details">
-            <input type="text" placeholder="Full Name" className="input-box" />
-            <input type="text" placeholder="Email" className="input-box" />
-            <input
-              type="text"
-              placeholder="Phone Number"
-              className="input-box"
-            />
-          </div>
-          <div className="msg-area">
-            <textarea
-              name="Message"
-              id=""
-              cols="60"
-              rows="11"
-              placeholder="Message"
-              className="message"
-            ></textarea>
-          </div>
-        </div>
-        <div className="form-btn">
-          <button className="send">Send Message</button>
-        </div>
-
-        <div className="map">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.3752409713156!2d85.31923917551984!3d27.70569827618346!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb190786e87ceb%3A0xcd0bb5ab90660324!2sCambridge%20Institute%20of%20Technology!5e0!3m2!1sen!2snp!4v1696399045756!5m2!1sen!2snp"
-            frameborder="0"
-            width="100%"
-            height="100%"
-          ></iframe>
-        </div>
-
-        <div className="branches">
-          <h1 className="branches-heading">Our Branches</h1>
-          <div className="boxes">{x && x}</div>
-        </div>
-      </div>
-    </div>
-  );
+  ],
 };
-
-export default Contact;

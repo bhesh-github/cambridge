@@ -58,15 +58,13 @@
         display: flex;
         align-items: center;
         color: $primaryDarkerBlack;
-        cursor: pointer;
-        padding: 5px;
         font-family: "Roboto", sans-serif;
         margin-top: 0.4em;
         .menu {
           display: flex;
           gap: 25px;
           align-items: center;
-          .btn {
+          .apply-btn {
             cursor: pointer;
             background-color: transparent;
             border: 1px solid #fff;
@@ -74,21 +72,20 @@
             font-size: 18px;
             font-weight: 600;
             padding: 10px;
+            transition: 0.3s;
+            &:hover {
+              color: rgb(234, 232, 232);
+              border: 1px solid rgb(234, 232, 232);
+            }
           }
-          .nav-link {
+          .nav-item {
             text-decoration: none;
-            // color: $primaryDarkerBlue;
             color: #fff;
             font-size: 1.1rem;
           }
-          .nav-link:active {
+          .nav-item:active {
             color: $primaryOrange;
           }
-          // Remove this duplicate definition
-          // .nav-link {
-          //   color: red;
-          //   background-color: #000;
-          // }
         }
 
         // -----------------dropdown----------------------
@@ -97,19 +94,16 @@
           background-color: transparent;
           font-size: 1.1rem;
           border: none;
-          // color: $primaryDarkerBlue;
           color: #fff;
         }
 
         .dropdown {
           position: relative;
           display: inline-block;
-
           &:hover .hidden-dropdown {
             display: block;
           }
         }
-
         .hidden-dropdown {
           height: max-content;
           width: max-content;
@@ -131,7 +125,7 @@
             border: 1px solid $primaryDarkerBlue;
             background-color: #fff;
             // background-color: red;
-            padding: 10px 0 0 10px;
+            padding: 10px 10px 0 10px;
             color: $primaryDarkerBlue;
 
             a {
@@ -140,6 +134,8 @@
               display: block;
               color: $primaryDarkerBlue;
               padding: 0.5em 1em;
+              cursor: pointer;
+
               // color: red;
             }
 
@@ -148,9 +144,13 @@
               color: #fff;
             }
 
-            .nav-link {
+            .drop-item {
               margin-bottom: 10px;
               color: $primaryDarkerBlue;
+              cursor: pointer;
+              &:hover {
+                color: $primaryOrange;
+              }
             }
           }
         }

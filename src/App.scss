@@ -24,15 +24,22 @@ body {
 @import "./scssPartials/main/navbar";
 @import "./scssPartials/main/footer/footer";
 
+@import "./scssPartials/forAll/scrollToTopBtn";
+@import "./scssPartials/forAll/popup";
+@import "./scssPartials/forAll/otherBanner";
+@import "./scssPartials/forAll/memberCard";
+@import "./scssPartials/forAll/datePiker";
+
 @import "./scssPartials/pages/home/homePage";
 @import "./scssPartials/pages/about/aboutPage";
 @import "./scssPartials/pages/error/oops";
-
 @import "./scssPartials/pages/studyAbroad/abroadCountry";
-
 @import "./scssPartials/pages/preparation/preparationIeltsPte";
 @import "./scssPartials/pages/resources/resources";
 @import "./scssPartials/pages/contact/contact";
-@import "./scssPartials/forAll/scrollToTopBtn";
-@import "./scssPartials/forAll/popup";
 @import "./scssPartials/pages/gallery/gallery";
+@import "./scssPartials/pages/gallery/galleryImages/galleryImages";
+@import "./scssPartials/pages/teamMembers/teamMembers";
+@import "./scssPartials/pages/newsAndBlogs/newsAndBlogsDetail/newsAndBlogsDetail";
+@import "./scssPartials/pages/newsAndBlogs/newsAndBlogs.scss";
+@import "./scssPartials/pages/applyNow/applyNow";

@@ -7,6 +7,7 @@ import { BiHeadphone } from "react-icons/bi";
 import { RxReader } from "react-icons/rx";
 import { TfiWrite } from "react-icons/tfi";
 import { RiSpeakLine } from "react-icons/ri";
+import OtherBanner from "../../forAll/OtherBanner";
 
 const PreparationIeltsPte = () => {
   const { preparationSlug } = useParams();
@@ -14,9 +15,9 @@ const PreparationIeltsPte = () => {
   const x = () => {
     if (preparationSlug === "ielts") {
       return (
-        <div className="content">
-          <h1 className="ielts-head">IELTS</h1>
-          <div className="ielts-content">
+        <div className="content-wrapper">
+          <h1 className="head">IELTS</h1>
+          <div className="content">
             <div className="txt">
               <p className="txt-p">
                 The IELTS exam is a requirement for international individuals
@@ -45,10 +46,10 @@ const PreparationIeltsPte = () => {
                 authorities.
               </p>
             </div>
-            <img src={ieltsImg} alt="" className="ieltsImg" />
+            <img src={ieltsImg} alt="" className="course-img" />
           </div>
-          <div className="ielts-section">
-            <div className="box">
+          <div className="cards-wrapper">
+            <div className="card">
               <div className="icon">
                 <BiHeadphone className="listen-icon" />
                 <p className="icon-txt">Listening</p>
@@ -60,7 +61,7 @@ const PreparationIeltsPte = () => {
                 the answer sheet.
               </div>
             </div>
-            <div className="box">
+            <div className="card">
               <div className="icon">
                 <RxReader className="listen-icon" />
                 <p className="icon-txt">Reading</p>
@@ -71,7 +72,7 @@ const PreparationIeltsPte = () => {
                 answer the questions.
               </div>
             </div>
-            <div className="box">
+            <div className="card">
               <div className="icon">
                 <TfiWrite className="listen-icon" />
                 <p className="icon-txt">Writing</p>
@@ -82,7 +83,7 @@ const PreparationIeltsPte = () => {
                 written responses.
               </div>
             </div>
-            <div className="box">
+            <div className="card">
               <div className="icon">
                 <RiSpeakLine className="listen-icon" />
                 <p className="icon-txt">Speaking</p>
@@ -102,9 +103,9 @@ const PreparationIeltsPte = () => {
       );
     } else {
       return (
-        <div className="content">
-          <h1 className="pte-head">PTE</h1>
-          <div className="pte-content">
+        <div className="content-wrapper">
+          <h1 className="head">PTE</h1>
+          <div className="content">
             <div className="txt">
               <p className="txt-p">
                 PTE, which stands for Pearson Test of English, is a
@@ -127,10 +128,10 @@ const PreparationIeltsPte = () => {
                 segments.
               </p>
             </div>
-            <img src={pteImg} alt="" className="pteImg" />
+            <img src={pteImg} alt="" className="course-img" />
           </div>
-          <div className="pte-section">
-            <div className="box">
+          <div className="cards-wrapper">
+            <div className="card">
               <div className="icon">
                 <BiHeadphone className="listen-icon" />
                 <p className="icon-txt">Listening</p>
@@ -142,7 +143,7 @@ const PreparationIeltsPte = () => {
                 the answer sheet.
               </div>
             </div>
-            <div className="box">
+            <div className="card">
               <div className="icon">
                 <RxReader className="listen-icon" />
                 <p className="icon-txt">Reading</p>
@@ -153,7 +154,7 @@ const PreparationIeltsPte = () => {
                 answer the questions.
               </div>
             </div>
-            <div className="box">
+            <div className="card">
               <div className="icon">
                 <TfiWrite className="listen-icon" />
                 <p className="icon-txt">Writing</p>
@@ -164,7 +165,7 @@ const PreparationIeltsPte = () => {
                 written responses.
               </div>
             </div>
-            <div className="box">
+            <div className="card">
               <div className="icon">
                 <RiSpeakLine className="listen-icon" />
                 <p className="icon-txt">Speaking</p>
@@ -187,7 +188,7 @@ const PreparationIeltsPte = () => {
 
   return (
     <div className="preparation">
-      <img src={banner} alt="" className="pre-banner" />
+      <OtherBanner bannerImg={banner} />
       {x()}
     </div>
   );

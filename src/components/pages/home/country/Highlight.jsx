@@ -9,9 +9,9 @@ import aus from "../../../../images/studyAbroad/aus.png";
 import can from "../../../../images/studyAbroad/cad.png";
 import usa from "../../../../images/studyAbroad/usa.png";
 import uk from "../../../../images/studyAbroad/uk.png";
-import japan from "../../../../images/studyAbroad/japan.png";
-import india from "../../../../images/studyAbroad/india.png";
-import dubai from "../../../../images/studyAbroad/dubai.png";
+// import japan from "../../../../images/studyAbroad/japan.png";
+// import india from "../../../../images/studyAbroad/india.png";
+// import dubai from "../../../../images/studyAbroad/dubai.png";
 
 // import { AirlineSeatFlatAngledSharp } from "@mui/icons-material";
 

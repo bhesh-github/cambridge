@@ -1,172 +1,197 @@
 .about-page {
   width: 100%;
-
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   .banner {
-    height: 340px;
     .banner-img {
       width: 100%;
       height: 100%;
-      filter: blur(0.5px);
     }
   }
-  .intro-box {
-    display: flex;
-    justify-content: center;
-    width: 100%;
+  .content-wrapper {
+    width: 1284.5px;
+    padding: 0px 45px;
 
-    .intro {
-      width: 1284.5px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .intro-wrapper {
       margin-top: 120px;
-      padding: 0 45px;
       .intro-heading {
         color: $primaryDarkerBlue;
         text-align: left;
         width: 100%;
-        font-size: 35px;
-        padding-left: 10px;
+        font-size: 40px;
+        margin-bottom: 0.3em;
       }
       .intro-desc {
         color: $primaryGrey;
-        padding: 10px 10px 0;
         text-align: justify;
         font-size: 16px;
         font-family: Roboto;
       }
     }
-  }
-  .mission-vision {
-    width: 100%;
-    // height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // background-color: red;
-    margin-top: 80px;
-    .mv-box {
-      width: 1284.5px;
-      height: 240px;
+    @media screen and (max-width: 550px) {
+      .intro-wrapper {
+        margin-top: 60px;
+        .intro-heading {
+          font-size: 30px;
+        }
+      }
+    }
+    .mission-vision-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5em;
+      margin-top: 60px;
 
-      padding: 0 45px;
-      display: flex;
-      justify-content: space-between;
       .mv-icon {
         color: $primaryDarkBlue;
       }
       .mission {
-        // height: 300px;
-        width: 550px;
-
         .mission-heading {
           color: $primaryDarkerBlue;
           text-align: left;
           width: 100%;
-          font-size: 35px;
-          padding: 10px;
+          font-size: 40px;
+          margin-bottom: 0.3em;
         }
         .mission-desc {
           color: $primaryGrey;
-          padding: 10px;
           text-align: justify;
           font-size: 16px;
-
           font-family: Roboto;
         }
       }
       .vision {
-        // height: 300px;
-        width: 550px;
         .vision-heading {
           color: $primaryDarkerBlue;
           text-align: left;
           width: 100%;
-          font-size: 35px;
-          padding: 10px;
+          font-size: 40px;
+          margin-bottom: 0.3em;
         }
         .vision-desc {
           color: $primaryGrey;
-          padding: 10px;
           text-align: justify;
           font-size: 16px;
-
           font-family: Roboto;
+        }
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      .mission-vision-wrapper {
+        grid-template-columns: 1fr;
+        gap: 1em;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .mission-vision-wrapper {
+        margin-top: 60px;
+        .mission {
+          .mission-heading {
+            font-size: 30px;
+          }
+        }
+        .vision {
+          .vision-heading {
+            font-size: 30px;
+          }
+        }
+      }
+    }
+    .experience {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $primaryDarkerBlue;
+      margin-top: 60px;
+
+      .experience-heading {
+        font-size: 40px;
+        margin-bottom: 0.3em;
+      }
+      .experience-desc {
+        font-size: 16px;
+        color: $primaryGrey;
+        text-align: justify;
+        font-family: Roboto;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .experience {
+        margin-top: 60px;
+        .experience-heading {
+          font-size: 30px;
+        }
+      }
+    }
+    .consulant {
+      margin-top: 60px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: $primaryDarkerBlue;
+      // margin-top: 80px;
+      .consulant-heading {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 0.3em;
+      }
+      .consulant-desc {
+        font-size: 16px;
+        color: $primaryGrey;
+        text-align: justify;
+        font-family: Roboto;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .consulant {
+        margin-top: 60px;
+        .consulant-heading {
+          font-size: 30px;
+        }
+      }
+    }
+    .success {
+      margin-top: 60px;
+
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      color: $primaryDarkerBlue;
+
+      .success-heading {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 0.3em;
+      }
+      .success-desc {
+        font-size: 16px;
+        color: $primaryGrey;
+        text-align: justify;
+        font-family: Roboto;
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .success {
+        margin-top: 60px;
+        .success-heading {
+          font-size: 30px;
         }
       }
     }
   }
 
-  .experience {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: $primaryDarkerBlue;
-    margin-top: 120px;
-
-    .experience-heading {
-      // padding: 0px;
-      font-size: 35px;
-      padding-bottom: 10px;
-    }
-    .experience-desc {
-      font-size: 16px;
-
-      color: $primaryGrey;
-      padding: 10px 45px;
-      text-align: justify;
-      width: 1284.5px;
-      font-family: Roboto;
+  @media screen and (max-width: 1284.5px) {
+    .content-wrapper {
+      width: 100%;
     }
   }
-  .consulant {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: $primaryDarkerBlue;
-    margin-top: 80px;
-
-    .consulant-heading {
-      // padding: 0px;
-      font-size: 35px;
-      padding-bottom: 10px;
-    }
-    .consulant-desc {
-      font-size: 16px;
-
-      color: $primaryGrey;
-      padding: 10px 45px;
-      text-align: justify;
-      width: 1284.5px;
-      font-family: Roboto;
-    }
-  }
-  .success {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    color: $primaryDarkerBlue;
-    margin-top: 80px;
-
-    .success-heading {
-      // padding: 0px;
-      font-size: 35px;
-      padding-bottom: 10px;
-    }
-    .success-desc {
-      font-size: 16px;
-
-      color: $primaryGrey;
-      padding: 10px 45px;
-      text-align: justify;
-      width: 1284.5px;
-      font-family: Roboto;
+  @media screen and (max-width: 550px) {
+    .content-wrapper {
+      padding: 15px;
     }
   }
 }

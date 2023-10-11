@@ -132,6 +132,7 @@ NewsCarousel.defaultProps = {
       title: "News and Events",
       head: "A special session for studying in Australia...",
       date: "Sepetember 29, 2023",
+      slug: "special-session-for-studing-in-australia",
     },
     {
       id: 1,
@@ -139,6 +140,7 @@ NewsCarousel.defaultProps = {
       title: "News and Events",
       head: "Guiding the path for students to obtain their visas.",
       date: "Sepetember 10, 2023",
+      slug: "guiding-the-path-for-students",
     },
     {
       id: 2,
@@ -146,6 +148,7 @@ NewsCarousel.defaultProps = {
       title: "News and Events",
       head: "Individualized one-on-one sessions.",
       date: "Sepetember 05, 2023",
+      slug: "individualized-one-on-one-sessions",
     },
     {
       id: 3,
@@ -153,6 +156,7 @@ NewsCarousel.defaultProps = {
       title: "News and Events",
       head: "We've recently partnered with a new university.",
       date: "August 27, 2023",
+      slug: "recently-partnered-with-a-new-university",
     },
     {
       id: 4,
@@ -160,6 +164,7 @@ NewsCarousel.defaultProps = {
       title: "News and Events",
       head: "We have proudly received a certificate from a top-notch consultancy.",
       date: "August 15, 2023",
+      slug: "proudly-received-a-certificate-from-a-top-notch-consultancy",
     },
   ],
 };

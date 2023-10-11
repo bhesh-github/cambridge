@@ -1,28 +1,17 @@
+@import "./countries/countries";
+
 .study-abroad {
   width: 100%;
-  // height: 3600px;
   display: flex;
   justify-self: center;
   flex-direction: column;
   align-items: center;
   color: $primaryGrey;
   font-family: Roboto;
-
-  .country-banner {
-    height: 340px;
-    width: 100%;
-    .country-banner-img {
-      height: 100%;
-      width: 100%;
-      filter: blur(0.5px);
-    }
-  }
   .menu-nav {
     width: 100%;
-    height: 80px;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     font-family: "Roboto", sans-serif;
     box-shadow: 3px 3px 10px rgb(228, 227, 227);
@@ -31,288 +20,106 @@
     position: sticky;
     top: 0;
     .nav-items {
+      margin: 10px 45px;
       width: 1284.5px;
-      height: 100%;
       display: flex;
-      gap: 2.5em;
-      align-items: center;
-      padding: 0 45px;
+      justify-content: flex-start;
+      gap: 2em;
+      overflow-x: auto;
       .option {
+        padding: 5px 15px;
         cursor: pointer;
         text-decoration: none;
         color: $primaryDarkerBlack;
+        width: max-content;
+        min-width: max-content;
+        transition: 0.3s;
+        &:hover {
+          color: #fff;
+          background-color: $primaryOrange;
+        }
+      }
+    }
+    @media screen and (max-width: 550px) {
+      .nav-items {
+        margin: 10px 15px;
       }
     }
   }
-
   .study {
     width: 1284.5px;
-    padding: 45px 45px;
+    padding: 0px 45px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2em;
-    text-align: justify;
     .content {
       width: 800px;
-      .aus {
-        .study-aus-heading {
-          color: $primaryDarkerBlue;
-          font-family: playfair;
-        }
-        .aus-img {
-          height: 260px;
-          width: 250px;
-          float: left;
-          padding: 48px 5px 0 0;
-          margin-right: 10px;
-        }
-        .aus-why-heading {
-          color: $primaryDarkerBlue;
-          font-family: playfair;
-          padding: 45px 0 10px 0;
-          // background-color: red;
-        }
-        .apply-aus-desc {
-          line-height: 1.5;
-          color: $primaryGrey;
-        }
-        .apply-aus-desc-head {
-          line-height: 2;
-          color: $primaryDarkerBlack;
-        }
-        .apply-desc {
-          line-height: 2;
-        }
-        .apply-desc-note {
-          line-height: 1.5;
-          color: $primaryDarkerBlack;
-          font-weight: 500;
-          padding-top: 45px;
-        }
-        .uni {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          .aus-uni-desc {
-            line-height: 1.5;
-            // font-size: 16px;
-            //   text-decoration: double;
-          }
-        }
-        .aus-cost-sub-heading {
-          color: $primaryDarkerBlack;
-          padding: 20px 0;
-          font-family: "Playfair Display", serif;
-          font-size: 18px;
-        }
-        .aus-cost-desc {
-          line-height: 2;
-        }
-        .aus-cost-note {
-          line-height: 1.5;
-          color: $primaryDarkerBlack;
-          font-weight: 500;
-          padding-top: 30px;
-        }
-        .aus-scholor-desc {
-          color: $primaryDarkerBlack;
-          padding-bottom: 20px;
-          // font-family: "Playfair Display", serif;
-        }
-        .aus-scholor-desc {
-          line-height: 1.5;
-          padding-bottom: 5px;
-          .scholor-span {
-            font-size: 20px;
-            color: $primaryDarkerBlack;
-          }
-        }
-      }
-      .can {
-        .study-can-heading {
-          color: $primaryDarkerBlue;
-          font-family: playfair;
-        }
-        .can-img {
-          height: 260px;
-          width: 250px;
-          float: left;
-          padding: 48px 5px 0 0;
-          margin-right: 10px;
-        }
-        .can-why-heading {
-          color: $primaryDarkerBlue;
-          font-family: playfair;
-          padding: 45px 0 10px 0;
-          // background-color: red;
-        }
-        .apply-can-desc {
-          line-height: 1.5;
-          color: $primaryGrey;
-        }
-        .apply-can-desc-head {
-          line-height: 2;
-          color: $primaryDarkerBlack;
-        }
-        .apply-desc {
-          line-height: 2;
-        }
-        .apply-desc-note {
-          line-height: 1.5;
-          color: $primaryDarkerBlack;
-          font-weight: 500;
-          padding-top: 45px;
-        }
-        .uni {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          .can-uni-desc {
-            line-height: 1.5;
-            // font-size: 16px;
-            //   text-decoration: double;
-          }
-        }
-        .can-cost-sub-heading {
-          color: $primaryDarkerBlack;
-          padding: 20px 0;
-          font-family: "Playfair Display", serif;
-          font-size: 18px;
-        }
-        .can-cost-desc {
-          line-height: 2;
-        }
-        .can-cost-note {
-          line-height: 1.5;
-          color: $primaryDarkerBlack;
-          font-weight: 500;
-          padding-top: 30px;
-        }
-        .can-scholor-desc {
-          color: $primaryDarkerBlack;
-          padding-bottom: 20px;
-          // font-family: "Playfair Display", serif;
-        }
-        .can-scholor-desc {
-          line-height: 1.5;
-          padding-bottom: 5px;
-          .scholor-span {
-            font-size: 20px;
-            color: $primaryDarkerBlack;
-          }
-        }
-      }
-      .usa {
-        .study-usa-heading {
-          color: $primaryDarkerBlue;
-          font-family: playfair;
-        }
-        .usa-img {
-          height: 260px;
-          width: 250px;
-          float: left;
-          padding: 48px 5px 0 0;
-          margin-right: 10px;
-        }
-        .usa-why-heading {
-          color: $primaryDarkerBlue;
-          font-family: playfair;
-          padding: 45px 0 10px 0;
-          // background-color: red;
-        }
-        .apply-usa-desc {
-          line-height: 1.5;
-          color: $primaryGrey;
-        }
-        .apply-usa-desc-head {
-          line-height: 2;
-          color: $primaryDarkerBlack;
-        }
-        .apply-desc {
-          line-height: 2;
-        }
-        .apply-desc-note {
-          line-height: 1.5;
-          color: $primaryDarkerBlack;
-          font-weight: 500;
-          padding-top: 45px;
-        }
-        .uni {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          .usa-uni-desc {
-            line-height: 1.5;
-            // font-size: 16px;
-            //   text-decoration: double;
-          }
-        }
-        .usa-cost-sub-heading {
-          color: $primaryDarkerBlack;
-          padding: 20px 0;
-          font-family: "Playfair Display", serif;
-          font-size: 18px;
-        }
-        .usa-cost-desc {
-          line-height: 2;
-        }
-        .usa-cost-note {
-          line-height: 1.5;
-          color: $primaryDarkerBlack;
-          font-weight: 500;
-          padding-top: 30px;
-        }
-        .usa-scholor-desc {
-          color: $primaryDarkerBlack;
-          padding-bottom: 20px;
-          // font-family: "Playfair Display", serif;
-        }
-        .usa-scholor-desc {
-          line-height: 1.5;
-          padding-bottom: 5px;
-          .scholor-span {
-            font-size: 20px;
-            color: $primaryDarkerBlack;
-          }
-        }
-      }
     }
     .form {
-      .box {
-        height: 370px;
-        width: 100%;
-        // background-color: bisque;
-        box-shadow: 0px 0px 4px 0px #989898;
-        border-radius: 20px;
-        position: sticky;
-        top: 120px;
-        // z-index: 5;
-        .head {
-          color: $primaryDarkerBlue;
-          padding: 20px;
-          text-align: center;
-        }
-        .input-area {
-          padding: 15px 30px;
-          display: flex;
-          flex-direction: column;
-          .text-box {
-            height: 45px;
-            width: 100%;
-            margin-bottom: 10px;
-            padding-left: 10px;
-            border: 1px solid grey;
-            border-radius: 10px;
-            font-size: 16px;
-          }
-        }
-        .submit-btn {
-          margin: 20px 30px;
-          width: 100px;
-          height: 35px;
-          cursor: pointer;
-          border: none;
-          border-radius: 20px;
-          color: #fff;
+      margin-top: 120px;
+      height: max-content;
+      box-shadow: 0px 0px 4px 0px #989898;
+      border-radius: 20px;
+      position: sticky;
+      top: 120px;
+      .head {
+        color: $primaryDarkerBlue;
+        padding: 20px;
+        text-align: center;
+        font-size: 22px;
+      }
+      .input-area {
+        padding: 15px 30px;
+        display: flex;
+        flex-direction: column;
+        .text-box {
+          height: 45px;
+          width: 100%;
+          margin-bottom: 10px;
+          padding-left: 10px;
+          border: 1px solid grey;
+          border-radius: 10px;
           font-size: 16px;
-          background-color: $primaryOrange;
+        }
+      }
+      .submit-btn {
+        margin: 20px 30px;
+        width: 100px;
+        height: 35px;
+        cursor: pointer;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        font-size: 16px;
+        background-color: $primaryOrange;
+        transition: 0.3s;
+      }
+    }
+  }
+  @media screen and (max-width: 1284.5px) {
+    .study {
+      width: 100%;
+      grid-template-columns: 1fr;
+      .content {
+        width: 100%;
+      }
+      .form {
+        margin-top: 0;
+        width: 350px;
+      }
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .study {
+      padding: 15px;
+    }
+  }
+  @media screen and (max-width: 380px) {
+    .study {
+      .form {
+        width: auto;
+        .input-area {
+          padding: 15px 15px;
         }
       }
     }

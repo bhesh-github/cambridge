@@ -10,12 +10,11 @@
   background-repeat: no-repeat;
   margin-top: 120px;
   .in-wrapper {
+    // background-color: purple;
     width: 1284.5px;
     padding: 0 45px;
-
-    // background-color: green;
-
     .h-course {
+      // background-color: red;
       width: 100%;
       display: flex;
       justify-content: center;
@@ -37,6 +36,9 @@
         .heading {
           font-size: 30px;
         }
+        .course-desc {
+          padding-bottom: 10px;
+        }
       }
     }
     .cards-wrapper {
@@ -44,7 +46,16 @@
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 5em;
-      // background-color: yellow;
+    }
+    @media screen and (max-width: 1230px) {
+      .cards-wrapper {
+        gap: 3em;
+      }
+    }
+    @media screen and (max-width: 1000px) {
+      .cards-wrapper {
+        gap: 2em;
+      }
     }
   }
   @media screen and (max-width: 1285px) {

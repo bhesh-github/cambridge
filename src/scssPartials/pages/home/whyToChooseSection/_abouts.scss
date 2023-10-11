@@ -12,10 +12,12 @@
     .heading {
       font-size: 40px;
       text-align: center;
-      color: $primaryDarkerBlue;
+      color: $primaryOrange;
       text-align: center;
       .highlight-head {
         color: $primaryDarkerBlack;
+        color: $primaryDarkerBlue;
+
       }
     }
     @media screen and (max-width: 900px) {

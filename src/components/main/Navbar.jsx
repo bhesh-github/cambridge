@@ -9,7 +9,7 @@ import Sidebar from "./Sidebar";
 
 export default function Navbar() {
   const [isDropdownContainer, setIsDropdownContainer] = useState("");
-  const [sidebarClass, setSidebarClass] = useState("block");
+  const [sidebarClass, setSidebarClass] = useState("none");
   sidebarClass === "block"
     ? (document.body.style.overflowY = "hidden")
     : (document.body.style.overflowY = "auto");
@@ -51,7 +51,7 @@ export default function Navbar() {
     },
     {
       id: 3,
-      title: " Prepration Classes",
+      title: "Prepration Classes",
       path: "/preparation-classes",
       sublinks: [
         {
@@ -147,8 +147,8 @@ export default function Navbar() {
                       <NavLink
                         key={id}
                         to={path}
-                        className="nav-link"
-                        activeClassName="active-link"
+                        className="nav-item"
+                        // activeClassName="active-link"
                       >
                         {title}
                       </NavLink>
@@ -173,7 +173,7 @@ export default function Navbar() {
                                     handleContainerContentClick();
                                   }}
                                   key={id}
-                                  className="nav-link"
+                                  className="drop-item"
                                   // to={`${navlinkPath}/${path}`}
                                   // onClick={handleContainerContentClick}
                                 >
@@ -187,9 +187,16 @@ export default function Navbar() {
                     );
                   }
                 })}
-                <span>
-                  <button className="btn">Apply Now</button>{" "}
-                </span>
+                <button className="apply-btn">
+                  <div
+                    className="btn-text"
+                    onClick={() => {
+                      navigate("/apply-now");
+                    }}
+                  >
+                    Apply Now
+                  </div>
+                </button>
               </div>
             </div>
           </div>

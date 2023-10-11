@@ -1,0 +1,48 @@
+.team-members {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 160px;
+  .cards-wrapper {
+    width: 1284.5px;
+    margin-top: 3em;
+    padding: 0 45px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
+  }
+  @media screen and (max-width: 1284.5px) {
+    .cards-wrapper {
+      width: 100%;
+    }
+  }
+  @media screen and (max-width: 1150px) {
+    .cards-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 900px) {
+    .cards-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 550px) {
+    .cards-wrapper {
+      margin-top: 1.5em;
+      gap: 1em;
+      padding: 0 15px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .cards-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+@media screen and (max-width: 500px) {
+  .team-members {
+    margin-top: 60px;
+  }
+}
